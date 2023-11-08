@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/query', [QueryStatController::class, 'index']);
+Route::get('/query', [QueryStatController::class, 'index'])->name('index');
+Route::get('/query/reset', [QueryStatController::class, 'reset'])->name('reset');
